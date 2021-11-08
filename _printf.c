@@ -8,6 +8,7 @@
  */
 int _printf(const char *format, ...)
 {
+	int counter;
 	int i, aux;
 	va_list ap;
 	lista array[] = {
@@ -27,14 +28,15 @@ int _printf(const char *format, ...)
 			i++;
 			for (aux = 0; array[aux].letter; aux++)
 				if (format[i] == array[aux].letter)
-					array[aux].p(ap);
+					counter = counter + array[aux].p(ap);
 		}
 		else
 		{
 			write(1, format + i, 1);
+			counter++;
 		}
 	}
 
 	va_end(ap);
-	return (0);
+	return (counter);
 }
