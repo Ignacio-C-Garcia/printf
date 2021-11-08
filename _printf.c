@@ -23,9 +23,11 @@ int _printf(const char *format, ...)
 	va_start(ap, format);
 	for (i = 0; format && format[i] != 0; i++)
 	{
-		if (format[i] == '%' && format[i + 1] != '%')
+		if (format[i] == '%')
 		{
 			i++;
+			if (format[i] == '%')
+				write(1, format + 1, 1);
 			for (aux = 0; array[aux].letter; aux++)
 				if (format[i] == array[aux].letter)
 					counter = counter + array[aux].p(ap);
