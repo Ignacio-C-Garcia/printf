@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 	va_start(ap, format);
 	for (i = 0; format && format[i] != 0; i++)
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i + 1] != '%')
 		{
 			i++;
 			for (aux = 0; array[aux].letter; aux++)
