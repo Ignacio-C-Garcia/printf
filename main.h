@@ -11,7 +11,7 @@ void fun_unint(va_list);
 int _pow_recursion(int x, int y);
 
 /**
-*struct lista- relaciona un caracter con una funcion
+*struct lista - Relate char with function
 *@letter: a character
 *@p: a function that prints a specific type
 *Description: longer description
@@ -21,4 +21,5 @@ struct lista
 char letter;
 void (*p)(va_list);
 };
+typedef struct lista lista;
 #endif

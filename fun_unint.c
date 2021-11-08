@@ -1,5 +1,11 @@
 #include <stdio.h>
 #include "main.h"
+
+/**
+ * fun_unint - Prints unint
+ *@ap: argument to va_list
+ */
+
 void fun_unint(va_list ap)
 {
 

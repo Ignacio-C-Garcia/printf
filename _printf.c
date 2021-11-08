@@ -3,12 +3,14 @@
  * _printf - printf
  * @format: a string
  *Return: number of bytes printed
+ *struct lista - List of functions
+ *Description: Longer description
  */
 int _printf(const char *format, ...)
 {
 	int i, aux;
 	va_list ap;
-	struct lista array[] = {
+	lista array[] = {
 		{'s', fun_str},
 		{'c', fun_char},
 		{'d', fun_int},

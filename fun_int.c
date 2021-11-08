@@ -1,5 +1,11 @@
 #include <stdio.h>
 #include "main.h"
+
+/**
+ *fun_int - Prints int
+ *@ap: variables list
+ */
+
 void fun_int(va_list ap)
 {
 

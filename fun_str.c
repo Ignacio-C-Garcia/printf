@@ -1,4 +1,10 @@
 #include "main.h"
+
+/**
+ * fun_str - Prints string
+ *@ap: argument of va_list
+ */
+
 void fun_str(va_list ap)
 {
 	char *str = va_arg(ap, char *);
