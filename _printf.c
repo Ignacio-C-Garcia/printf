@@ -8,7 +8,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int counter;
+	int counter = 0;
 	int i, aux;
 	va_list ap;
 	lista array[] = {
@@ -27,7 +27,10 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			if (format[i] == '%')
-				write(1, format + 1, 1);
+			{
+				counter += write(1, "%", 1);
+				continue;
+			}
 			for (aux = 0; array[aux].letter; aux++)
 				if (format[i] == array[aux].letter)
 					counter = counter + array[aux].p(ap);
