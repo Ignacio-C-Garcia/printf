@@ -4,9 +4,10 @@
 /**
  *fun_int - Prints int
  *@ap: variables list
+ *Return: number of digits printed
  */
 
-void fun_int(va_list ap)
+int fun_int(va_list ap)
 {
 
 	int number = va_arg(ap, int);
@@ -34,4 +35,5 @@ void fun_int(va_list ap)
 		write(1, &result, 1);
 		var = var / 10;
 	}
+	return (counter + 1);
 }

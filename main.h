@@ -4,12 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-void fun_str(va_list);
-void fun_char(va_list);
-void fun_int(va_list);
-void fun_unint(va_list);
-int _pow_recursion(int x, int y);
-
 /**
 *struct lista - Relate char with function
 *@letter: a character
@@ -19,7 +13,14 @@ int _pow_recursion(int x, int y);
 struct lista
 {
 char letter;
-void (*p)(va_list);
+int (*p)(va_list);
 };
 typedef struct lista lista;
+
+int fun_str(va_list);
+int fun_char(va_list);
+int fun_int(va_list);
+int fun_unint(va_list);
+int _printf(const char *, ...);
+int _pow_recursion(int x, int y);
 #endif

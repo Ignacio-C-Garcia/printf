@@ -2,12 +2,12 @@
 /**
  * fun_char - Print va_list
  *@ap: arg
+ *Return: 1
  */
 
-void fun_char(va_list ap)
+int fun_char(va_list ap)
 {
 	char aux = va_arg(ap, int);
 
-	if (aux >= 32 && aux <= 126)
-	write(1, &aux, 1);
+		return (write(1, &aux, 1));
 }

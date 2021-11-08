@@ -4,9 +4,10 @@
 /**
  * fun_unint - Prints unint
  *@ap: argument to va_list
+ *Return: number of digits printed
  */
 
-void fun_unint(va_list ap)
+int fun_unint(va_list ap)
 {
 
 	unsigned int number = va_arg(ap, int);
@@ -29,4 +30,5 @@ void fun_unint(va_list ap)
 		write(1, &result, 1);
 		var = var / 10;
 	}
+	return (counter + 1);
 }
