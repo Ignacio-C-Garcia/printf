@@ -1,41 +1,37 @@
-#include <stdio.h>
 #include "main.h"
-
 /**
- *fun_int - Prints int
- *@ap: variables list
- *Return: number of digits printed
- */
-
-int fun_int(va_list ap)
+*print_int_recursion - prints the number given as a parameter
+*@number: a number
+*Return: number of digits printed
+*/
+int print_int_recursion(int number)
 {
-
-	int number = va_arg(ap, int);
-	int aux = 10;
 	int counter = 0;
-	int var;
-	char result;
-	int guarangada = 1;
+	char print_char;
 
 	if (number < 0)
 	{
-		guarangada += write(1, "-", 1);
-		number *= (-1);
-	}
-	while ((number % aux) != number)
-	{
+		write(1, "-", 1);
 		counter++;
-		aux = aux * 10;
+		number = -number;
 	}
-
-	var = _pow_recursion(10, counter);
-
-	for (aux = 0; aux <= counter; aux++)
+	if (number / 10)
 	{
-		result = '0' + (number / var) % 10;
-		write(1, &result, 1);
-		if (var != 1)
-			var = var / 10;
+		counter += print_int_recursion(number / 10);
 	}
-	return (counter + guarangada);
+	print_char = number % 10 + '0';
+	write(1, &print_char, 1);
+	counter++;
+	return (counter);
+}
+/**
+* fun_int - print a digit
+* @ap: list of arguments
+* Return: larg of the digit
+*/
+int fun_int(va_list ap)
+{
+	int number = va_arg(ap, int);
+
+	return (print_int_recursion(number));
 }
