@@ -1,20 +1,23 @@
 #include "main.h"
 /**
 *print_int_recursion - prints the number given as a parameter
-*@number: a number
+*@input: a number
 *Return: number of digits printed
 */
-int print_int_recursion(int number)
+int print_int_recursion(int input)
 {
 	int counter = 0;
 	char print_char;
+	unsigned int number;
 
-	if (number < 0)
+	if (input < 0)
 	{
 		write(1, "-", 1);
 		counter++;
-		number = -number;
+		number = -input;
 	}
+	else
+		number = input;
 	if (number / 10)
 	{
 		counter += print_int_recursion(number / 10);
