@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == '%')
 			{
-				counter += write(1, "%", 1);
+				counter += write(1, format + i, 1);
 					continue;
 			}
 			for (aux = 0; fstruct(aux).letter; aux++)
@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 				}
 			if (!fstruct(aux).letter)
 			{	i--;
-				write(1, format + i, 1);
+				counter += write(1, format + i, 1);
 			}
 
 		}

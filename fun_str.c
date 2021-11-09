@@ -19,6 +19,6 @@ int fun_str(va_list ap)
 
 	}
 	else
-		exit(-1);
+		counter += write(1, "(null)", 6);
 	return (counter);
 }
