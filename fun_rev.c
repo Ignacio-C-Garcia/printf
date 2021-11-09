@@ -6,9 +6,13 @@
  */
 int fun_rev(va_list ap)
 {
-	char *str = va_arg(ap, char *);
+	char *str;
 	int i;
 	int count = 0;
+
+	str = va_arg(ap, char *);
+	if (!str)
+		exit(-1);
 
 	for (i = 0; str[i] != 0; i++)
 	{
