@@ -1,13 +1,33 @@
 .TH printf(1)
 
-.Sh NAME
+.SH NAME
 .B _printf
 
 .SH SYNOPSIS
+.SY
 #include "main.h"
 .br
 int _printf(const char *format, ...);
+.YS
 
 .SH DESCRIPTION
+.B _printf
+The function prints in the standard output according to the requested format in the input.
+The format string could be follow by the following conversion requests:
+
+.LP
+Conversion specifiers:
+.LP 
+c: Prints a character
+.LP 
+s: Prints a string of characters.
+.LP 
+i: i prints a integer.
+.LP 
+d: d prints a decimal number.
+
+.SH RETURN
+Succes unless an option is given or a write or a write argument error occurs.
+
 .SH AUTHOR
 Ignacio Castellán and Ezequiel Aldabalde
