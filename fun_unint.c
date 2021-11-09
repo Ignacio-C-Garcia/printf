@@ -10,10 +10,10 @@
 int fun_unint(va_list ap)
 {
 
-	unsigned int number = va_arg(ap, int);
-	int aux = 10;
-	int counter = 0;
-	int var;
+	unsigned int number = va_arg(ap, unsigned int);
+	unsigned int aux = 10;
+	unsigned int counter = 0;
+	unsigned int var;
 	char result;
 
 	while ((number % aux) != number)
@@ -28,7 +28,8 @@ int fun_unint(va_list ap)
 	{
 		result = '0' + (number / var) % 10;
 		write(1, &result, 1);
-		var = var / 10;
+		if (var != 1)
+			var = var / 10;
 	}
 	return (counter + 1);
 }

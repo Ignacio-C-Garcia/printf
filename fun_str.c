@@ -15,8 +15,10 @@ int fun_str(va_list ap)
 	if (str)
 	for (aux = 0; str[aux] != 0; aux++)
 	{
-		write(1, str + aux, 1);
-		counter++;
+		counter += write(1, str + aux, 1);
+
 	}
+	else
+		exit(-1);
 	return (counter);
 }
