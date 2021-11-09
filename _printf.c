@@ -36,9 +36,8 @@ int _printf(const char *format, ...)
 			{	i--;
 				write(1, format + i, 1);
 			}
-		
-		}
 
+		}
 		else
 		{
 			write(1, format + i, 1);
