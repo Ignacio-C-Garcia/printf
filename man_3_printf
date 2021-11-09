@@ -1,0 +1,13 @@
+.TH printf(1)
+
+.Sh NAME
+.B _printf
+
+.SH SYNOPSIS
+#include "main.h"
+.br
+int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+.SH AUTHOR
+Ignacio Castellán and Ezequiel Aldabalde
