@@ -15,10 +15,11 @@ int fun_int(va_list ap)
 	int counter = 0;
 	int var;
 	char result;
+	int guarangada = 0;
 
 	if (number < 0)
 	{
-		write(1, "-", 1);
+		guarangada += write(1, "-", 1);
 		number *= (-1);
 	}
 	while ((number % aux) != number)
@@ -33,7 +34,8 @@ int fun_int(va_list ap)
 	{
 		result = '0' + (number / var) % 10;
 		write(1, &result, 1);
-		var = var / 10;
+		if (var != 1)
+			var = var / 10;
 	}
-	return (counter + 1);
+	return (counter + guarangada);
 }
