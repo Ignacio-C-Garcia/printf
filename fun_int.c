@@ -34,7 +34,6 @@ int fun_int(va_list ap)
 	{
 		result = '0' + (number / var) % 10;
 		write(1, &result, 1);
-		if (var != 1)
 			var = var / 10;
 	}
 	return (counter + guarangada);
