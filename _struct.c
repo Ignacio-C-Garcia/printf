@@ -14,6 +14,7 @@ lista array[] = {
 	{'d', fun_int},
 	{'i', fun_int},
 	{'u', fun_unint},
+	{'r', fun_rev},
 	{'\0', NULL}
 };
 	return (array[i]);
