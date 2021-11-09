@@ -23,4 +23,5 @@ int fun_int(va_list);
 int fun_unint(va_list);
 int _printf(const char *, ...);
 int _pow_recursion(int x, int y);
+lista fstruct(int i);
 #endif
