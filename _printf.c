@@ -28,8 +28,17 @@ int _printf(const char *format, ...)
 			}
 			for (aux = 0; fstruct(aux).letter; aux++)
 				if (format[i] == fstruct(aux).letter)
+				{
 					counter = counter + fstruct(aux).p(ap);
+					break;
+				}
+			if (!fstruct(aux).letter)
+			{	i--;
+				write(1, format + i, 1);
+			}
+		
 		}
+
 		else
 		{
 			write(1, format + i, 1);
