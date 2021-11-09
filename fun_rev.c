@@ -11,17 +11,19 @@ int fun_rev(va_list ap)
 	int count = 0;
 
 	str = va_arg(ap, char *);
-	if (!str)
-		exit(-1);
+	if (str == 0)
+		return (-1);
 
 	for (i = 0; str[i] != 0; i++)
 	{
 		count++;
 	}
 
-	for (count--; count >= 0; count--)
+	i = count;
+
+	for (i--; i >= 0; i--)
 	{
-		write(1, str + count, 1);
+		write(1, str + i, 1);
 	}
 	return (count);
 }

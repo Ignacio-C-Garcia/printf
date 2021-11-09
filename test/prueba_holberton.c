@@ -13,7 +13,7 @@ int main(void)
     int len2;
     unsigned int ui;
     void *addr;
-
+/**
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
     ui = (unsigned int)INT_MAX + 1024;
@@ -39,5 +39,9 @@ int main(void)
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
     _printf("Unknown:[%r]\n", "ehcel");
+    */
+    len = _printf("hola [%s] \n", "hola");
+    len2 = _printf("hola [%r] \n", "hola");
+    printf("s: [%d] // rev: [%d]\n", len, len2);
     return (0);
 }
