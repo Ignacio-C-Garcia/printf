@@ -25,7 +25,10 @@ s: Prints a string of characters.
 i: i prints a integer.
 .LP 
 d: d prints a decimal number.
-
+.LP
+u: prints unsigned int
+.LP
+r: prints a string in reverse.
 .SH RETURN
 Succes unless an option is given or a write or a write argument error occurs.
 
